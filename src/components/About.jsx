@@ -1,5 +1,7 @@
 import React from "react";
-import Tilt from "react-tilt";
+// import Tilt from "react-tilt";
+import Tilt from 'react-parallax-tilt';
+
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -47,11 +49,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I’m a skilled Android Developer with strong experience in Java, specializing in building reliable and user-friendly Android applications. I enjoy turning ideas into functional, high-quality apps that make a difference. I’m a quick learner and work closely with clients to deliver efficient, scalable mobile solutions that solve real-world problems. Let’s collaborate and bring your Android app ideas to life!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

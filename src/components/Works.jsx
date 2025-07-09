@@ -1,5 +1,7 @@
 import React from "react";
-import Tilt from "react-tilt";
+// import Tilt from "react-tilt";
+import Tilt from 'react-parallax-tilt';
+
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -80,11 +82,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          The following projects showcase my skills and experience through real-world examples of my Android development work. Each project is briefly described with links to code repositories and, where possible, live app demos. They reflect my ability to solve complex problems, work with different tools and technologies, and manage mobile projects effectively.
         </motion.p>
       </div>
 

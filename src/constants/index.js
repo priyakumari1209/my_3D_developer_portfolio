@@ -8,6 +8,7 @@ import {
   html,
   css,
   reactjs,
+  // java,
   redux,
   tailwind,
   nodejs,
@@ -17,6 +18,7 @@ import {
   docker,
   meta,
   starbucks,
+  // smartknower,
   tesla,
   shopify,
   carrent,
@@ -24,6 +26,22 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+// import java from './java.png'; // or .svg or .jpg
+import java from "../assets/java.png";
+// import Artificial Intelligence from "../assets/Artificial Intelligence"
+// import Artificial Intelligence from "../assets/Artificial Intelligence"
+// import artificialIntelligence from "../assets/artificial-intelligence.png"; // use dash or camelCase, no spaces!
+import artificialIntelligence from "../assets/ArtificialIntelligence.png";
+// import smartknower from "./smartknower.png";
+// import smartknower from "../assets/smartknower.png";
+
+// export { smartknower };
+import smartknower from "../assets/smartknower.png";
+import perfectelearning from "../assets/perfectelearning.png";
+import reanin from "../assets/Reanin.png";
+
+
+
 
 export const navLinks = [
   {
@@ -42,11 +60,12 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Java Developer",
+    icon: java,
   },
+
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
@@ -54,8 +73,8 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Artificial Intelligence",
+    icon: artificialIntelligence,
   },
 ];
 
@@ -116,37 +135,37 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Artificial Intelligence",
+    company_name: "SmartKnower",
+    icon: smartknower,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Jun 2022 - Aug 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining Android applications using Java and related tools.",
+    "Collaborating with cross-functional teams including designers, product managers, and other developers to deliver high-quality mobile products.",
+    "Implementing intuitive user interfaces and ensuring compatibility across multiple Android devices.",
+    "Participating in code reviews and providing constructive feedback to maintain code quality."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Android Developer",
+    company_name: "Perfect eLearning",
+    icon: perfectelearning,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Dec 2022 - Aug 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining Android applications using Java and Android Studio.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality mobile applications.",
+      "Implementing intuitive user interfaces and ensuring compatibility across various Android devices and OS versions.",
+      "Participating in code reviews and providing constructive feedback to improve code quality and performance.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Research Intern",
+    company_name: "ReAnIn",
+    icon: reanin,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Mar 2024 - Jul 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -155,8 +174,8 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
+    title: "Junior Android Developer",
+    company_name: "ina Payments Software Pvt Ltd",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
