@@ -1,46 +1,29 @@
 import {
   mobile,
   backend,
-  creator,
-  web,
   javascript,
-  typescript,
   html,
   css,
-  reactjs,
-  // java,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
   meta,
-  starbucks,
-  // smartknower,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
 } from "../assets";
-// import java from './java.png'; // or .svg or .jpg
 import java from "../assets/java.png";
-// import Artificial Intelligence from "../assets/Artificial Intelligence"
-// import Artificial Intelligence from "../assets/Artificial Intelligence"
-// import artificialIntelligence from "../assets/artificial-intelligence.png"; // use dash or camelCase, no spaces!
 import artificialIntelligence from "../assets/ArtificialIntelligence.png";
-// import smartknower from "./smartknower.png";
-// import smartknower from "../assets/smartknower.png";
-
-// export { smartknower };
+import handwritten from "../assets/handwritten.png";
 import smartknower from "../assets/smartknower.png";
 import perfectelearning from "../assets/perfectelearning.png";
 import reanin from "../assets/Reanin.png";
-
-
+import androiddevelopers from "../assets/androiddevelopers.png";
+import jetpackcompose from "../assets/jetpackcompose.png";
+import dart from "../assets/dart.png";
+import git from "../assets/git.png";
+import flutter from "../assets/flutter.png";
+import firebase from "../assets/firebase.png";
+import sqllite from "../assets/sqllite.png";
+import kotlin from "../assets/kotlin.png";
+import javaa from "../assets/javaa.png";
+import deep from "../assets/deep.png";
+import tictac from "../assets/tictac.png";
+import inapay from "../assets/inapay.png";
 
 
 export const navLinks = [
@@ -92,72 +75,56 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "jetpackcompose",
+    icon: jetpackcompose,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "dart",
+    icon: dart,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
+    name: "androiddevelopers",
+    icon: androiddevelopers,
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "firebase",
+    icon: firebase,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "sqllite",
+    icon: sqllite,
+  },
+  {
+    name: "kotlin",
+    icon: kotlin,
+  },
+ 
+  {
+    name: "flutter",
+    icon: flutter,
+  },
+  {
+    name: "javaa",
+    icon: javaa,
   },
 ];
 
 const experiences = [
   {
-    title: "Artificial Intelligence",
-    company_name: "SmartKnower",
-    icon: smartknower,
-    iconBg: "#383E56",
-    date: "Jun 2022 - Aug 2022",
-    points: [
-      "Developing and maintaining Android applications using Java and related tools.",
-    "Collaborating with cross-functional teams including designers, product managers, and other developers to deliver high-quality mobile products.",
-    "Implementing intuitive user interfaces and ensuring compatibility across multiple Android devices.",
-    "Participating in code reviews and providing constructive feedback to maintain code quality."
-    ],
-  },
-  {
-    title: "Android Developer",
-    company_name: "Perfect eLearning",
-    icon: perfectelearning,
+    title: "Junior Android Developer",
+    company_name: "ina Payments Software Pvt Ltd",
+    icon: inapay,
     iconBg: "#E6DEDD",
-    date: "Dec 2022 - Aug 2023",
+    date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining Android applications using Java and Android Studio.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality mobile applications.",
-      "Implementing intuitive user interfaces and ensuring compatibility across various Android devices and OS versions.",
-      "Participating in code reviews and providing constructive feedback to improve code quality and performance.",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -174,24 +141,40 @@ const experiences = [
     ],
   },
   {
-    title: "Junior Android Developer",
-    company_name: "ina Payments Software Pvt Ltd",
-    icon: meta,
+    title: "Android Developer",
+    company_name: "Perfect eLearning",
+    icon: perfectelearning,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Dec 2022 - Aug 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining Android applications using Java and Android Studio.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality mobile applications.",
+      "Implementing intuitive user interfaces and ensuring compatibility across various Android devices and OS versions.",
+      "Participating in code reviews and providing constructive feedback to improve code quality and performance.",
     ],
   },
+  {
+    title: "Artificial Intelligence",
+    company_name: "SmartKnower",
+    icon: smartknower,
+    iconBg: "#383E56",
+    date: "Jun 2022 - Aug 2022",
+    points: [
+      "Developing and maintaining Android applications using Java and related tools.",
+    "Collaborating with cross-functional teams including designers, product managers, and other developers to deliver high-quality mobile products.",
+    "Implementing intuitive user interfaces and ensuring compatibility across multiple Android devices.",
+    "Participating in code reviews and providing constructive feedback to maintain code quality."
+    ],
+  },
+  
+  
+  
 ];
 
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to build an app as smooth and user-friendly as our vision, but Priya proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -199,7 +182,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met an Android developer who genuinely cares about delivering a flawless user experience like Priya does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -207,7 +190,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Priya optimized our mobile app, our user engagement doubled. We can't thank her enough!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -215,60 +198,61 @@ const testimonials = [
   },
 ];
 
+
 const projects = [
   {
-    name: "Car Rent",
+    name: "Efficient CNN-Based Deep Learning Model for Hand Sign Image Recognition",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "During my Artificial Intelligence internship, I developed a deep learning model capable of accurately predicting various hand signs depicted in images. The model exhibits robustness and high accuracy in classifying hand sign gestures.",
     tags: [
       {
-        name: "react",
+        name: "Deep Learning",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Python Programming",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Convolutional Neural Networks (CNNs)",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: handwritten,
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/hand-sign-image-prediction",
   },
   {
-    name: "Job IT",
+    name: "Efficient CNN-Based Deep Learning Model for Hand Sign Image Recognition",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "During my Artificial Intelligence internship, I developed a deep learning model capable of accurately predicting various hand signs depicted in images. The model exhibits robustness and high accuracy in classifying hand sign gestures.",
     tags: [
       {
-        name: "react",
+        name: "Deep Learning",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Python & ML Frameworks",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Computer Vision",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: deep,
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/hand-sign-image-prediction",
   },
   {
-    name: "Trip Guide",
+    name: "Created a Flawless Tic Tac Toe Game Using Android Studio",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Developed a perfect Tic Tac Toe game using Android Studio. This game offers a seamless and enjoyable gaming experience, demonstrating my Android development skills.",
     tags: [
       {
-        name: "nextjs",
+        name: "Android Studio",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "java / Kotlin Programming",
         color: "green-text-gradient",
       },
       {
@@ -276,8 +260,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: tictac,
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/Tic-Tac-Toe",
   },
 ];
 
