@@ -75,41 +75,32 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "jetpackcompose",
-    icon: jetpackcompose,
+    name: "Compose",
+    icon:jetpackcompose,
   },
+  
+  
   {
-    name: "dart",
-    icon: dart,
-  },
-  {
-    name: "androiddevelopers",
-    icon: androiddevelopers,
-  },
-  {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "firebase",
+    name: "Firebase",
     icon: firebase,
   },
   {
-    name: "sqllite",
+    name: "Sqllite",
     icon: sqllite,
   },
   {
-    name: "kotlin",
+    name: "Kotlin",
     icon: kotlin,
   },
  
+  
   {
-    name: "flutter",
-    icon: flutter,
-  },
-  {
-    name: "javaa",
-    icon: javaa,
+    name: "Java",
+    icon: java,
   },
 ];
 
@@ -201,67 +192,31 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Efficient CNN-Based Deep Learning Model for Hand Sign Image Recognition",
+    name: "Hand Sign Recognition",
+    category: "AI/ML",
     description:
-      "During my Artificial Intelligence internship, I developed a deep learning model capable of accurately predicting various hand signs depicted in images. The model exhibits robustness and high accuracy in classifying hand sign gestures.",
-    tags: [
-      {
-        name: "Deep Learning",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Python Programming",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Convolutional Neural Networks (CNNs)",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Efficient CNN model for recognizing various hand signs with 95% accuracy.",
+    tags: ["Python", "TensorFlow", "OpenCV"],
     image: handwritten,
-    source_code_link: "https://github.com/Thogaruchesti-hemanth/hand-sign-image-prediction",
+    source_code_link: "https://github.com",
   },
   {
-    name: "Efficient CNN-Based Deep Learning Model for Hand Sign Image Recognition",
+    name: "Deep Learning Digit Recognition",
+    category: "AI/ML",
     description:
-      "During my Artificial Intelligence internship, I developed a deep learning model capable of accurately predicting various hand signs depicted in images. The model exhibits robustness and high accuracy in classifying hand sign gestures.",
-    tags: [
-      {
-        name: "Deep Learning",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Python & ML Frameworks",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Computer Vision",
-        color: "pink-text-gradient",
-      },
-    ],
+      "CNN-based deep learning model achieving 98% accuracy on MNIST dataset.",
+    tags: ["Python", "CNN", "TensorFlow"],
     image: deep,
-    source_code_link: "https://github.com/Thogaruchesti-hemanth/hand-sign-image-prediction",
+    source_code_link: "https://github.com",
   },
   {
-    name: "Created a Flawless Tic Tac Toe Game Using Android Studio",
+    name: "Tic Tac Toe Game",
+    category: "Android",
     description:
-      "Developed a perfect Tic Tac Toe game using Android Studio. This game offers a seamless and enjoyable gaming experience, demonstrating my Android development skills.",
-    tags: [
-      {
-        name: "Android Studio",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "java / Kotlin Programming",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
+      "A smooth and flawless Tic Tac Toe Android game developed using Java/Kotlin.",
+    tags: ["Java", "Android", "XML"],
     image: tictac,
-    source_code_link: "https://github.com/Thogaruchesti-hemanth/Tic-Tac-Toe",
+    source_code_link: "https://github.com",
   },
 ];
 
