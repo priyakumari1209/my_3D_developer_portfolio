@@ -36,10 +36,10 @@ const Hero = () => {
     mobile features and Android applications
   </p>
 </div>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          {/* <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop user interfaces, <br className='sm:block hidden' />
             mobile features and Android applications
-          </p>
+          </p> */}
 
           {/* ---------- Buttons Section ---------- */}
           <div className="mt-6 flex flex-col gap-4">
