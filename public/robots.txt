@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thogaruchesti-hemanth.web.app/sitemap.xml
