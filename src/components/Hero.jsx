@@ -2,13 +2,37 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { useEffect } from "react";
 
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import DescriptionIcon from "@mui/icons-material/Description";
+import CodeIcon from "@mui/icons-material/Code";
+
+import { styled } from "@mui/material/styles";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+
+const IndigoTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(() => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "#4f46e5",
+    color: "#fff",
+    fontSize: "13px",
+    fontWeight: 500,
+    borderRadius: "8px",
+    padding: "6px 12px",
+  },
+  [`& .${tooltipClasses.arrow}`]: {
+    color: "#4f46e5",
+  },
+}));
+
 const Hero = () => {
   useEffect(() => {
     const startCanvas = () => {
       try {
         window.TagCanvas.Start("myCanvas", "tags", {
-          textColour: "#ffffff",      // pure white
-          outlineColour: "#ffffff",  // no glow outline
+          textColour: "#ffffff",
+          outlineColour: "#ffffff",
           reverse: true,
           depth: 0.9,
           maxSpeed: 0.05,
@@ -17,16 +41,14 @@ const Hero = () => {
           wheelZoom: false,
           noSelect: true,
           freezeActive: false,
-          shadow: false,             // ❌ remove glow
-          shadowBlur: 0,             // ❌ no blur
+          shadow: false,
+          shadowBlur: 0,
         });
-        
       } catch (e) {
         console.log("TagCanvas error:", e);
       }
     };
 
-    // Wait until TagCanvas script is loaded
     const interval = setInterval(() => {
       if (window.TagCanvas && document.getElementById("myCanvas")) {
         startCanvas();
@@ -47,7 +69,7 @@ const Hero = () => {
       <div
         className={`relative z-10 max-w-7xl mx-auto w-full ${styles.paddingX} grid md:grid-cols-2 gap-16 items-center`}
       >
-        {/* ================= LEFT ================= */}
+        {/* LEFT */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
@@ -59,8 +81,7 @@ const Hero = () => {
           </span>
 
           <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-            Hemanth{" "}
-            <span className="text-indigo-400">Thogaruchesti</span>
+            Hemanth <span className="text-indigo-400">Thogaruchesti</span>
           </h1>
 
           <p className="text-slate-400 text-lg max-w-xl">
@@ -69,34 +90,82 @@ const Hero = () => {
             ideas into smooth user experiences.
           </p>
 
-          <div className="flex gap-4 pt-4">
-            <a
-              href="#projects"
-              className="px-7 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg hover:scale-105 transition"
-            >
-              View Projects
-            </a>
+          <div className="space-y-6 pt-4">
+            <div className="flex gap-4">
+              <a
+                href="#projects"
+                className="px-7 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg hover:scale-105 transition"
+              >
+                View Projects
+              </a>
 
-            <a
-              href="#contact"
-              className="px-7 py-3 rounded-xl border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white transition"
-            >
-              Contact Me
-            </a>
+              <a
+                href="#contact"
+                className="px-7 py-3 rounded-xl border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white transition"
+              >
+                Contact Me
+              </a>
+            </div>
+
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-6 ml-[36px]" >
+
+              <IndigoTooltip title="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/in/thogaruchesti-hemanth/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-indigo-500/30 hover:bg-indigo-500 transition"
+                >
+                  <LinkedInIcon className="text-indigo-400 hover:text-white" />
+                </a>
+              </IndigoTooltip>
+
+              <IndigoTooltip title="GitHub">
+                <a
+                  href="https://github.com/Thogaruchesti-hemanth"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-indigo-500/30 hover:bg-indigo-500 transition"
+                >
+                  <GitHubIcon className="text-indigo-400 hover:text-white" />
+                </a>
+              </IndigoTooltip>
+
+              <IndigoTooltip title="LeetCode">
+                <a
+                  href="https://leetcode.com/u/Thogaruchesti_Hemanth/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-indigo-500/30 hover:bg-indigo-500 transition"
+                >
+                  <CodeIcon className="text-indigo-400 hover:text-white" />
+                </a>
+              </IndigoTooltip>
+
+              <IndigoTooltip title="Download Resume">
+                <a
+                  href="/THOGARUCHESTI_HEMANTH.pdf"
+                  download
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-indigo-500/30 hover:bg-indigo-500 transition"
+                >
+                  <DescriptionIcon className="text-indigo-400 hover:text-white" />
+                </a>
+              </IndigoTooltip>
+
+            </div>
           </div>
         </motion.div>
 
-        {/* ================= RIGHT: 3D SKILLS ================= */}
+        {/* RIGHT – SKILLS */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
-          // transition={{ duration: 0.8 }}÷
           className="rounded-2xl p-6 flex items-center justify-center"
         >
           <div className="relative w-[420px] h-[420px]">
             <canvas id="myCanvas" width="420" height="420" />
-
-            <ul id="tags" className="hidden"   >
+            <ul id="tags" className="hidden">
               <li><a>HTML</a></li>
               <li><a>CSS</a></li>
               <li><a>JavaScript</a></li>
