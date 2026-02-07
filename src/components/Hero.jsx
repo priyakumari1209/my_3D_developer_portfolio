@@ -1,18 +1,53 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import DownloadIcon from "@mui/icons-material/Download";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    const startCanvas = () => {
+      try {
+        window.TagCanvas.Start("myCanvas", "tags", {
+          textColour: "#ffffff",      // pure white
+          outlineColour: "#ffffff",  // no glow outline
+          reverse: true,
+          depth: 0.9,
+          maxSpeed: 0.05,
+          initial: [0.2, -0.2],
+          dragControl: true,
+          wheelZoom: false,
+          noSelect: true,
+          freezeActive: false,
+          shadow: false,             // ❌ remove glow
+          shadowBlur: 0,             // ❌ no blur
+        });
+        
+      } catch (e) {
+        console.log("TagCanvas error:", e);
+      }
+    };
+
+    // Wait until TagCanvas script is loaded
+    const interval = setInterval(() => {
+      if (window.TagCanvas && document.getElementById("myCanvas")) {
+        startCanvas();
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className={`relative w-full min-h-screen flex items-center ${styles.heroBg}`}>
-      
-      {/* Background glow */}
+    <section
+      className={`relative w-full min-h-screen flex items-center ${styles.heroBg}`}
+    >
+      {/* Glow */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-indigo-600/30 blur-[160px] rounded-full" />
 
-      <div className={`relative z-10 max-w-7xl mx-auto w-full ${styles.paddingX} grid md:grid-cols-2 gap-16 items-center`}>
-
-        {/* ================= LEFT CONTENT ================= */}
+      <div
+        className={`relative z-10 max-w-7xl mx-auto w-full ${styles.paddingX} grid md:grid-cols-2 gap-16 items-center`}
+      >
+        {/* ================= LEFT ================= */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
@@ -25,8 +60,7 @@ const Hero = () => {
 
           <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
             Hemanth{" "}
-            <span className="text-indigo-400">Thogaruchesti</span> <br />
-            
+            <span className="text-indigo-400">Thogaruchesti</span>
           </h1>
 
           <p className="text-slate-400 text-lg max-w-xl">
@@ -52,25 +86,33 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* ================= RIGHT GLASS CARD ================= */}
-        {/* <motion.div
+        {/* ================= RIGHT: 3D SKILLS ================= */}
+        <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-slate-900/70 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-8 shadow-2xl"
+          // transition={{ duration: 0.8 }}÷
+          className="rounded-2xl p-6 flex items-center justify-center"
         >
-          <h3 className="text-white text-xl font-semibold mb-6">
-            Current Focus
-          </h3>
+          <div className="relative w-[420px] h-[420px]">
+            <canvas id="myCanvas" width="420" height="420" />
 
-          <ul className="space-y-4 text-slate-300">
-            <li>• Android Architecture (MVVM, Clean)</li>
-            <li>• Room, Content Providers</li>
-            <li>• Firebase Auth & Play Store launches</li>
-            <li>• DSA & problem solving</li>
-          </ul>
-        </motion.div> */}
-
+            <ul id="tags" className="hidden"   >
+              <li><a>HTML</a></li>
+              <li><a>CSS</a></li>
+              <li><a>JavaScript</a></li>
+              <li><a>Flutter</a></li>
+              <li><a>Firebase</a></li>
+              <li><a>Dart</a></li>
+              <li><a>Android</a></li>
+              <li><a>Git</a></li>
+              <li><a>UI/UX</a></li>
+              <li><a>SQLite</a></li>
+              <li><a>MySQL</a></li>
+              <li><a>Python</a></li>
+              <li><a>Figma</a></li>
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
