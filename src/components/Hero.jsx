@@ -159,10 +159,11 @@ const Hero = () => {
 
         {/* RIGHT – SKILLS */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="rounded-2xl p-6 flex items-center justify-center"
-        >
+  initial={{ opacity: 0, x: 60 }}
+  animate={{ opacity: 1, x: 0 }}
+  className="hidden md:flex rounded-2xl p-6 items-center justify-center"
+>
+
           <div className="relative w-[420px] h-[420px]">
             <canvas id="myCanvas" width="420" height="420" />
             <ul id="tags" className="hidden">
