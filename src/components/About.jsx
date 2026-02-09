@@ -1,58 +1,96 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
-import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[260px] w-full">
+// Services data
+const services = [
+  {
+    title: "Android Application Engineering",
+    description:
+      "Developing robust native Android applications using Java and modern architectural patterns with a focus on long-term maintainability.",
+  },
+  {
+    title: "Modern UI & UX",
+    description:
+      "Crafting clean, intuitive interfaces aligned with Material Design principles and optimized for real-world user interactions.",
+  },
+  {
+    title: "Architecture & Performance",
+    description:
+      "Applying MVVM and clean architecture to ensure scalable systems, smooth performance, and reliable state management.",
+  },
+  {
+    title: "API Integration",
+    description:
+      "Integrating RESTful APIs, data persistence, and background services to deliver consistent and responsive mobile experiences.",
+  },
+];
+
+// Service Card Component
+const ServiceCard = ({ title, description }) => (
+  <Tilt
+    className="xs:w-[250px] w-full"
+    tiltMaxAngleX={10}
+    tiltMaxAngleY={10}
+    glareEnable={false}
+    scale={1}
+  >
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.3, 0.75)}
-      className="w-full p-[1px] rounded-[20px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg"
+      variants={fadeIn("right", "spring", 0, 0.75)}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      className="w-[250px] h-[300px] rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-purple-400"
     >
-      <div className="glass-card py-8 px-10 min-h-[280px] flex flex-col justify-center items-center gap-6 transition-all duration-300 hover:scale-[1.05]">
-        <img
-          src={icon}
-          alt={title}
-          className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.9)]"
-        />
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
+      <h3 className="text-[#a855f7] text-lg font-bold">{title}</h3>
+      <p className="text-gray-300 text-sm flex-grow">{description}</p>
     </motion.div>
   </Tilt>
 );
 
 const About = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+    <section >
+      {/* Intro Text */}
+      <motion.div variants={textVariant()} className="mb-8 max-w-3xl mx-auto text-center">
+        <p
+          className={styles.sectionSubText}
+          style={{ letterSpacing: "3px", fontSize: "18px" }}
+        >
+          INTRODUCTION
+        </p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
+      {/* Description Paragraph */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-gray-300 text-lg max-w-4xl mx-auto leading-[30px]"
       >
-        I’m a skilled Android Developer with strong experience in Java,
-        specializing in building reliable and user-friendly Android
-        applications. I enjoy turning ideas into functional, high-quality apps
-        that make a difference. I’m a quick learner and work closely with clients
-        to deliver efficient, scalable mobile solutions that solve real-world
-        problems. Let’s collaborate and bring your Android app ideas to life!
+        I design and build high-quality Android applications with a strong focus
+        on performance, scalability, and clean user experience. My work revolves
+        around transforming complex requirements into intuitive, reliable mobile
+        products using modern Android development practices.
+        <br />
+        <br />
+        I value clean architecture, maintainable code, and thoughtful UI design.
+        Every application I build is approached with a product mindset — balancing
+        technical precision with usability and long-term growth.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+      {/* Services Cards */}
+      <div className="mt-12 flex flex-wrap gap-8 justify-center">
+        {services.map((service) => (
+          <ServiceCard
+            key={service.title}
+            title={service.title}
+            description={service.description}
+          />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
