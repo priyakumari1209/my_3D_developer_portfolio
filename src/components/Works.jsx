@@ -1,7 +1,5 @@
 import React from "react";
-// import Tilt from "react-tilt";
-import Tilt from 'react-parallax-tilt';
-
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -21,12 +19,11 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={45}
+        scale={1}
+        transitionSpeed={450}
+        className='bg-[#020617]/80 p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -56,10 +53,7 @@ const ProjectCard = ({
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
+            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -71,9 +65,18 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <section
+      style={{
+        background: `
+          radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
+          radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
+          #020617
+        `,
+      }}
+      className='w-full'
+    >
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -91,7 +94,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

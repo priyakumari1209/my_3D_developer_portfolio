@@ -1,9 +1,6 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
 
 // Services data
 const services = [
@@ -29,32 +26,26 @@ const services = [
   },
 ];
 
-// Service Card Component
+// Service Card Component (all content visible)
 const ServiceCard = ({ title, description }) => (
-  <Tilt
-    className="xs:w-[250px] w-full"
-    tiltMaxAngleX={10}
-    tiltMaxAngleY={10}
-    glareEnable={false}
-    scale={1}
-  >
-    <motion.div
-      variants={fadeIn("right", "spring", 0, 0.75)}
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-      className="w-[250px] h-[300px] rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-purple-400"
-    >
-      <h3 className="text-[#a855f7] text-lg font-bold">{title}</h3>
-      <p className="text-gray-300 text-sm flex-grow">{description}</p>
-    </motion.div>
-  </Tilt>
+  <div className="w-[250px] h-auto rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-400">
+    <h3 className="text-[#a855f7] text-lg font-bold">{title}</h3>
+    <p className="text-gray-300 text-sm">{description}</p>
+  </div>
 );
 
 const About = () => {
   return (
-    <section >
+    <section
+      style={{
+        background: `radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%), 
+                     radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%), 
+                     #020617`,
+      }}
+      className="w-full min-h-screen py-16 px-4 sm:px-8"
+    >
       {/* Intro Text */}
-      <motion.div variants={textVariant()} className="mb-8 max-w-3xl mx-auto text-center">
+      <div className="mb-8 max-w-3xl">
         <p
           className={styles.sectionSubText}
           style={{ letterSpacing: "3px", fontSize: "18px" }}
@@ -62,13 +53,10 @@ const About = () => {
           INTRODUCTION
         </p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+      </div>
 
       {/* Description Paragraph */}
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-gray-300 text-lg max-w-4xl mx-auto leading-[30px]"
-      >
+      <p className="mt-4 text-gray-300 text-lg max-w-4xl leading-[30px]">
         I design and build high-quality Android applications with a strong focus
         on performance, scalability, and clean user experience. My work revolves
         around transforming complex requirements into intuitive, reliable mobile
@@ -78,10 +66,10 @@ const About = () => {
         I value clean architecture, maintainable code, and thoughtful UI design.
         Every application I build is approached with a product mindset — balancing
         technical precision with usability and long-term growth.
-      </motion.p>
+      </p>
 
-      {/* Services Cards */}
-      <div className="mt-12 flex flex-wrap gap-8 justify-center">
+      {/* Services Cards - all in a single row */}
+      <div className="mt-12 flex gap-8 overflow-x-auto">
         {services.map((service) => (
           <ServiceCard
             key={service.title}
