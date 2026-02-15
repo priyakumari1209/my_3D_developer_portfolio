@@ -92,8 +92,9 @@ const Hero = () => {
 
           {/* Name */}
           <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-            Hemanth Thogaruchesti
+            Hemanth 
           </h1>
+           <h1 className= "text-[#afc6ff] text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">Thogaruchesti</h1>
 
           {/* Description */}
           <p className="text-gray-300 text-lg max-w-xl">
@@ -107,14 +108,14 @@ const Hero = () => {
             <div className="flex gap-4">
               <a
                 href="#projects"
-                className="px-7 py-3 rounded-xl bg-white/10 text-white shadow-lg hover:scale-105 transition"
+                className="px-7 py-3 rounded-xl border border-white/20  hover:text-white transition hover:scale-105 transition hover:bg-white/20"
               >
                 View Projects
               </a>
 
               <a
                 href="#contact"
-                className="px-7 py-3 rounded-xl border border-white/20 text-white hover:bg-white/20 hover:text-white transition"
+                className="px-7 py-3 rounded-xl border border-white/20  hover:text-white transition hover:scale-105 transition hover:bg-white/20"
               >
                 Contact Me
               </a>
@@ -127,7 +128,7 @@ const Hero = () => {
                   href="https://www.linkedin.com/in/thogaruchesti-hemanth/"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-full  border border-white/20 hover:bg-white/20 transition"
                 >
                   <LinkedInIcon className="text-white" />
                 </a>
@@ -138,7 +139,7 @@ const Hero = () => {
                   href="https://github.com/Thogaruchesti-hemanth"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-full  border border-white/20 hover:bg-white/20 transition"
                 >
                   <GitHubIcon className="text-white" />
                 </a>
@@ -149,7 +150,7 @@ const Hero = () => {
                   href="https://leetcode.com/u/Thogaruchesti_Hemanth/"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-full  border border-white/20 hover:bg-white/20 transition"
                 >
                   <CodeIcon className="text-white" />
                 </a>
@@ -159,7 +160,7 @@ const Hero = () => {
                 <a
                   href="/THOGARUCHESTI_HEMANTH.pdf"
                   download
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-full  border border-white/20 hover:bg-white/20 transition"
                 >
                   <DescriptionIcon className="text-white" />
                 </a>

@@ -28,8 +28,8 @@ const services = [
 
 // Service Card Component (all content visible)
 const ServiceCard = ({ title, description }) => (
-  <div className="w-[250px] h-auto rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-400">
-    <h3 className="text-[#a855f7] text-lg font-bold">{title}</h3>
+  <div className="w-[250px] h-auto rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-200">
+    <h3 className="text-[#afc6ff]  text-lg font-bold">{title}</h3>
     <p className="text-gray-300 text-sm">{description}</p>
   </div>
 );

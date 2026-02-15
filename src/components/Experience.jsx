@@ -69,11 +69,12 @@ const Experience = () => {
       className="w-full min-h-screen py-16 px-4 sm:px-8"
     >
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+        <p className={`${styles.sectionSubText } text-left`}>
+          
+          Mobile Development | Android | Java | Kotlin
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+        <h2 className={`${styles.sectionHeadText} text-left`}>
+          Professional Experience.
         </h2>
       </motion.div>
 

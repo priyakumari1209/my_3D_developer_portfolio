@@ -118,19 +118,19 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
-    title: "Research Intern",
-    company_name: "ReAnIn",
-    icon: reanin,
-    iconBg: "#383E56",
-    date: "Mar 2024 - Jul 2024",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Research Intern",
+  //   company_name: "ReAnIn",
+  //   icon: reanin,
+  //   iconBg: "#383E56",
+  //   date: "Mar 2024 - Jul 2024",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
   {
     title: "Android Developer",
     company_name: "Perfect eLearning",
@@ -144,19 +144,19 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to improve code quality and performance.",
     ],
   },
-  {
-    title: "Artificial Intelligence",
-    company_name: "SmartKnower",
-    icon: smartknower,
-    iconBg: "#383E56",
-    date: "Jun 2022 - Aug 2022",
-    points: [
-      "Developing and maintaining Android applications using Java and related tools.",
-    "Collaborating with cross-functional teams including designers, product managers, and other developers to deliver high-quality mobile products.",
-    "Implementing intuitive user interfaces and ensuring compatibility across multiple Android devices.",
-    "Participating in code reviews and providing constructive feedback to maintain code quality."
-    ],
-  },
+  // {
+  //   title: "Artificial Intelligence",
+  //   company_name: "SmartKnower",
+  //   icon: smartknower,
+  //   iconBg: "#383E56",
+  //   date: "Jun 2022 - Aug 2022",
+  //   points: [
+  //     "Developing and maintaining Android applications using Java and related tools.",
+  //   "Collaborating with cross-functional teams including designers, product managers, and other developers to deliver high-quality mobile products.",
+  //   "Implementing intuitive user interfaces and ensuring compatibility across multiple Android devices.",
+  //   "Participating in code reviews and providing constructive feedback to maintain code quality."
+  //   ],
+  // },
   
   
   
