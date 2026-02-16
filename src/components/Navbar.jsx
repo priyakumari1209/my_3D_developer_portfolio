@@ -17,19 +17,20 @@ const Navbar = () => {
       setScrolled(scrollTop > 100);
 
       // Update active link based on scroll position
-      const scrollPosition = scrollTop + 200; // offset for navbar height
+      const scrollPosition = scrollTop + 200;
+
       navLinks.forEach((nav) => {
-        const section = document.getElementById(nav.id);
+        const section = document.getElementById(nav.id); // ✅ THIS
         if (section) {
           const top = section.offsetTop;
           const bottom = top + section.offsetHeight;
+      
           if (scrollPosition >= top && scrollPosition < bottom) {
             setActive(nav.title);
           }
         }
       });
-    };
-
+    };      
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
