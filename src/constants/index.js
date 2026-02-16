@@ -24,7 +24,7 @@ import javaa from "../assets/javaa.png";
 import deep from "../assets/deep.png";
 import tictac from "../assets/tictac.png";
 import inapay from "../assets/inapay.png";
-
+import mysqlIcon from "../assets/mysql-svgrepo-com.png";
 
 export const navLinks = [
   {
@@ -67,6 +67,41 @@ const services = [
 
 const technologies = [
   {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "Kotlin",
+    icon: kotlin,
+  },
+  {
+    name: "Compose",
+    icon:jetpackcompose,
+  },
+  {
+    name: "Android ",
+    icon:androiddevelopers,
+  },
+  {
+    name: "Git",
+    icon: git,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+  
+  {
+    name: "MySQL",
+    icon: mysqlIcon,
+  },
+  
+  {
+    
+    name: "Sqllite",
+    icon: sqllite,
+  },
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -78,34 +113,9 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "Compose",
-    icon:jetpackcompose,
-  },
+
+
   
-  
-  {
-    name: "Git",
-    icon: git,
-  },
-  {
-    name: "Firebase",
-    icon: firebase,
-  },
-  {
-    name: "Sqllite",
-    icon: sqllite,
-  },
-  {
-    name: "Kotlin",
-    icon: kotlin,
-  },
- 
-  
-  {
-    name: "Java",
-    icon: java,
-  },
 ];
 
 const experiences = [
