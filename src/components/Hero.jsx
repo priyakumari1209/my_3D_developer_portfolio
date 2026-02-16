@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DescriptionIcon from "@mui/icons-material/Description";
-import CodeIcon from "@mui/icons-material/Code";
+import LeetCodeIcon from "../components/LeetCodeIcon";
 
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
@@ -146,15 +146,16 @@ const Hero = () => {
               </NeutralTooltip>
 
               <NeutralTooltip title="LeetCode">
-                <a
-                  href="https://leetcode.com/u/Thogaruchesti_Hemanth/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full  border border-white/20 hover:bg-white/20 transition"
-                >
-                  <CodeIcon className="text-white" />
-                </a>
-              </NeutralTooltip>
+  <a
+    href="https://leetcode.com/u/Thogaruchesti_Hemanth/"
+    target="_blank"
+    rel="noreferrer"
+    className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/20 transition"
+  >
+    <LeetCodeIcon className="w-6 h-6 text-white hover:text-gray-400 transition" />
+  </a>
+</NeutralTooltip>
+
 
               <NeutralTooltip title="Download Resume">
                 <a

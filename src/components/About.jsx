@@ -26,10 +26,10 @@ const services = [
   },
 ];
 
-// Service Card Component (all content visible)
+// Service Card Component
 const ServiceCard = ({ title, description }) => (
-  <div className="w-[250px] h-auto rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-200">
-    <h3 className="text-[#afc6ff]  text-lg font-bold">{title}</h3>
+  <div className="w-full rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-200">
+    <h3 className="text-[#afc6ff] text-lg font-bold">{title}</h3>
     <p className="text-gray-300 text-sm">{description}</p>
   </div>
 );
@@ -55,7 +55,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </div>
 
-      {/* Description Paragraph */}
+      {/* Description */}
       <p className="mt-4 text-gray-300 text-lg max-w-4xl leading-[30px]">
         I design and build high-quality Android applications with a strong focus
         on performance, scalability, and clean user experience. My work revolves
@@ -68,8 +68,8 @@ const About = () => {
         technical precision with usability and long-term growth.
       </p>
 
-      {/* Services Cards - all in a single row */}
-      <div className="mt-12 flex gap-8 overflow-x-auto">
+      {/* Cards – Responsive grid */}
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service) => (
           <ServiceCard
             key={service.title}
