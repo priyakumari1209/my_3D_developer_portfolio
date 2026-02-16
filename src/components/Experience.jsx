@@ -71,7 +71,7 @@ const Experience = () => {
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText } text-left`}>
           
-          Mobile Development | Android | Java | Kotlin
+          Mobile Developer
         </p>
         <h2 className={`${styles.sectionHeadText} text-left`}>
           Professional Experience.
