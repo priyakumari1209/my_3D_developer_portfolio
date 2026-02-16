@@ -2,7 +2,7 @@ import {
   mobile,
   backend,
   javascript,
-  html,
+
   css,
   meta,
 } from "../assets";
@@ -12,8 +12,8 @@ import handwritten from "../assets/handwritten.png";
 import smartknower from "../assets/smartknower.png";
 import perfectelearning from "../assets/perfectelearning.png";
 import reanin from "../assets/Reanin.png";
-import androiddevelopers from "../assets/androiddevelopers.png";
-import jetpackcompose from "../assets/jetpackcompose.png";
+import android from "../assets/android.png";
+import compose from "../assets/compose.png";
 import dart from "../assets/dart.png";
 import git from "../assets/git.png";
 import flutter from "../assets/flutter.png";
@@ -24,7 +24,7 @@ import javaa from "../assets/javaa.png";
 import deep from "../assets/deep.png";
 import tictac from "../assets/tictac.png";
 import inapay from "../assets/inapay.png";
-import mysqlIcon from "../assets/mysql-svgrepo-com.png";
+import mysqicons8lIcon from "../assets/mysqicons8lIcon.png";
 
 export const navLinks = [
   {
@@ -76,11 +76,11 @@ const technologies = [
   },
   {
     name: "Compose",
-    icon:jetpackcompose,
+    icon:compose,
   },
   {
     name: "Android ",
-    icon:androiddevelopers,
+    icon:android,
   },
   {
     name: "Git",
@@ -93,7 +93,7 @@ const technologies = [
   
   {
     name: "MySQL",
-    icon: mysqlIcon,
+    icon: mysqicons8lIcon,
   },
   
   {
@@ -101,10 +101,10 @@ const technologies = [
     name: "Sqllite",
     icon: sqllite,
   },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
+  // {
+  //   name: "HTML 5",
+  //   icon: html,
+  // },
   {
     name: "CSS 3",
     icon: css,
