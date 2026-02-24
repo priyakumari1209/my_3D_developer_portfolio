@@ -35,14 +35,15 @@ export const navLinks = [
     id: "work",
     title: "Work",
   },
-  { id: "skills", 
-    title: "Skills" 
+  {
+    id: "skills",
+    title: "Skills"
   },
   {
     id: "contact",
     title: "Contact",
   },
- 
+
 ];
 
 const services = [
@@ -76,11 +77,11 @@ const technologies = [
   },
   {
     name: "Compose",
-    icon:compose,
+    icon: compose,
   },
   {
     name: "Android ",
-    icon:android,
+    icon: android,
   },
   {
     name: "Git",
@@ -90,14 +91,14 @@ const technologies = [
     name: "Firebase",
     icon: firebase,
   },
-  
+
   {
     name: "MySQL",
     icon: mysqicons8lIcon,
   },
-  
+
   {
-    
+
     name: "Sqllite",
     icon: sqllite,
   },
@@ -115,7 +116,7 @@ const technologies = [
   },
 
 
-  
+
 ];
 
 const experiences = [
@@ -171,9 +172,9 @@ const experiences = [
   //   "Participating in code reviews and providing constructive feedback to maintain code quality."
   //   ],
   // },
-  
-  
-  
+
+
+
 ];
 
 const testimonials = [
@@ -206,31 +207,75 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Hand Sign Recognition",
-    category: "AI/ML",
-    description:
-      "Efficient CNN model for recognizing various hand signs with 95% accuracy.",
-    tags: ["Python", "TensorFlow", "OpenCV"],
-    image: handwritten,
-    source_code_link: "https://github.com",
-  },
-  {
-    name: "Deep Learning Digit Recognition",
-    category: "AI/ML",
+    name: "Handwritten Digit Recognition",
+    category: "ai",
     description:
       "CNN-based deep learning model achieving 98% accuracy on MNIST dataset.",
-    tags: ["Python", "CNN", "TensorFlow"],
+    tags: [
+      { name: "Python", color: "text-blue-400" },
+      { name: "TensorFlow", color: "text-orange-400" },
+      { name: "CNN", color: "text-green-400" },
+    ],
     image: deep,
-    source_code_link: "https://github.com",
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/handwrittten-digit-recognition",
+    demo_link: "https://drive.google.com/file/d/1EXguhDlMwGGVGFaCErT-DVa9sME8njMC/view?usp=sharing",
+  },
+  {
+    name: "Hand Sign Image Recognition",
+    category: "ai",
+    description:
+      "Efficient CNN model for recognizing various hand signs with 95% accuracy.",
+    tags: [
+      { name: "Python", color: "text-blue-400" },
+      { name: "Keras", color: "text-red-400" },
+      { name: "OpenCV", color: "text-emerald-400" },
+    ],
+    image: handwritten,
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/hand-sign-image-prediction",
+    demo_link: "https://drive.google.com/file/d/16eQqpOHsm4XLDbSiurSD1-RHQ77XXgp4/view?usp=sharing",
   },
   {
     name: "Tic Tac Toe Game",
-    category: "Android",
+    category: "android",
     description:
-      "A smooth and flawless Tic Tac Toe Android game developed using Java/Kotlin.",
-    tags: ["Java", "Android", "XML"],
+      "Flawless mobile game with intuitive UI and smooth gameplay experience.",
+    tags: [
+      { name: "Java", color: "text-amber-400" },
+      { name: "Android", color: "text-green-400" },
+      { name: "XML", color: "text-purple-400" },
+    ],
     image: tictac,
-    source_code_link: "https://github.com",
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/Tic-Tac-Toe",
+    demo_link: "https://drive.google.com/file/d/16Gx3VATNzZyjKCivj9KOAL4pLD9wOf74/view?usp=sharing",
+  },
+  {
+    name: "Math Quiz Game",
+    category: "android",
+    description:
+      "Interactive educational app with multiple difficulty levels and score tracking.",
+    tags: [
+      { name: "Java", color: "text-amber-400" },
+      { name: "Android", color: "text-green-400" },
+      { name: "SQLite", color: "text-cyan-400" },
+    ],
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/math-quizz-game",
+    demo_link: "https://drive.google.com/file/d/13z3v_JYsD2jg2dCIVZOlREOLoiFkpeHK/view?usp=sharing",
+  },
+  {
+    name: "Portfolio Website",
+    category: "web",
+    description:
+      "Responsive professional portfolio with modern design and optimized performance.",
+    tags: [
+      { name: "HTML5", color: "text-orange-400" },
+      { name: "CSS3", color: "text-blue-400" },
+      { name: "JavaScript", color: "text-yellow-400" },
+      { name: "Bootstrap", color: "text-violet-400" },
+    ],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    source_code_link: "https://github.com/Thogaruchesti-hemanth/protfolio",
+    demo_link: "https://protfolio-git-main-thogaruchesti-hemanth.vercel.app/",
   },
 ];
 
