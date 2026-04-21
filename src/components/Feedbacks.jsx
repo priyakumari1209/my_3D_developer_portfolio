@@ -45,15 +45,8 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
   return (
-    <section
-      style={{
-        background: `
-          radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-          radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
-          #020617
-        `,
-      }}
-      className={`mt-12 rounded-[20px]`}
+    <div
+      className={`w-full rounded-[20px]`}
     >
       <div
         className={`bg-[#020617]/70 rounded-2xl ${styles.padding} min-h-[300px]`}
@@ -69,7 +62,7 @@ const Feedbacks = () => {
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

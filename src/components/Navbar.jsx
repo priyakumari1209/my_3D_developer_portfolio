@@ -48,21 +48,29 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      } transition-colors duration-300`}
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled 
+          ? "bg-[#020617]/80 backdrop-blur-md shadow-xl border-b border-white/10" 
+          : "bg-transparent"
+      }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3 group"
           onClick={() => {
             setActive("");
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-600/20 flex items-center justify-center shadow-lg shadow-purple-500/20 border border-white/10 group-hover:shadow-cyan-500/40 group-hover:scale-105 transition-all duration-300">
+            <img src={logo} alt="logo" className="w-8 h-8 object-contain" />
+          </div>
+          <p className="text-white text-[18px] font-bold cursor-pointer flex tracking-wide">
+            Hemanth &nbsp;
+            <span className="sm:block hidden font-light text-gray-300">| Portfolio</span>
+          </p>
         </Link>
 
         {/* Desktop Menu */}
@@ -70,15 +78,21 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`text-[18px] font-medium cursor-pointer
-                border-b-2 border-transparent
-                hover:border-white hover:text-white
-                transition-all duration-300 ${
-                  active === nav.title ? "border-white text-white" : "text-secondary"
-                }`}
+              className={`relative text-[16px] font-medium cursor-pointer tracking-wide
+                hover:text-cyan-400 transition-colors duration-300
+                ${active === nav.title ? "text-cyan-400" : "text-gray-300"}
+              `}
             >
-              <a href={`#${nav.id}`} onClick={(e) => handleNavClick(e, nav.id, nav.title)}>
+              <a 
+                href={`#${nav.id}`} 
+                onClick={(e) => handleNavClick(e, nav.id, nav.title)}
+                className="relative group py-2"
+              >
                 {nav.title}
+                {/* Animated underline */}
+                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-transform duration-300 origin-left 
+                  ${active === nav.title ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
+                `}></span>
               </a>
             </li>
           ))}
@@ -96,22 +110,24 @@ const Navbar = () => {
 <div
   className={`${
     !toggle ? "hidden" : "flex"
-  } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl
-     bg-[#6a1b9a]`}
+  } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-2xl
+     bg-[#020617]/90 backdrop-blur-xl border border-white/10 shadow-2xl shadow-purple-500/20`}
 >
 
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px]
-                    border-b-2 border-transparent
-                    hover:border-white hover:text-white
-                    transition-all duration-300 ${
-                      active === nav.title ? "border-white text-white" : "text-secondary"
-                    }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] w-full
+                    hover:text-cyan-400 transition-colors duration-300
+                    ${active === nav.title ? "text-cyan-400" : "text-gray-300"}
+                  `}
                 >
-                  <a href={`#${nav.id}`} onClick={(e) => handleNavClick(e, nav.id, nav.title)}>
+                  <a 
+                    href={`#${nav.id}`} 
+                    onClick={(e) => handleNavClick(e, nav.id, nav.title)}
+                    className="block w-full"
+                  >
                     {nav.title}
                   </a>
                 </li>

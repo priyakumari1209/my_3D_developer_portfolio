@@ -5,14 +5,7 @@ import { SectionWrapper } from "../hoc";
 
 const Tech = () => {
   return (
-    <section
-      style={{
-        background: `radial-gradient(circle at 80% 10%, rgba(56,189,248,0.08), transparent 40%),
-                     radial-gradient(circle at 20% 90%, rgba(168,85,247,0.08), transparent 45%),
-                     #020617`,
-      }}
-      className="w-full min-h-screen py-16 px-4 sm:px-8"
-    >
+    <div className="w-full">
       {/* Section heading */}
       <div className="mb-8 max-w-3xl">
         <p
@@ -48,7 +41,7 @@ const Tech = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
