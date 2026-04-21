@@ -64,19 +64,12 @@ const Hero = () => {
   return (
     <section
       className="relative w-full min-h-screen flex items-center"
-      style={{
-        background: `
-          radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-          radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
-          #020617
-        `,
-      }}
     >
       {/* Remove any extra purple glow */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-transparent blur-[160px] rounded-full" />
 
       <div
-        className={`relative z-10 max-w-7xl mx-auto w-full ${styles.paddingX} grid md:grid-cols-2 gap-16 items-center`}
+        className={`relative z-10 max-w-7xl mx-auto w-full ${styles.paddingX} grid md:grid-cols-2 gap-16 items-center pt-[120px] lg:pt-[150px]`}
       >
         {/* LEFT CONTENT */}
         <motion.div

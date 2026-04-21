@@ -20,8 +20,8 @@ const styles = {
   section: "relative w-full min-h-screen mx-auto",
 
   // Backgrounds (IMPORTANT)
-  heroBg: "bg-[#050816]",
-  sectionBg: "bg-[#020617]",
+  heroBg: "bg-transparent",
+  sectionBg: "bg-transparent",
 };
 
 export { styles };

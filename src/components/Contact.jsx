@@ -65,16 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      style={{
-        background: `
-          radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-          radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
-          #020617
-        `,
-      }}
-      className="w-full min-h-screen py-16 px-4 sm:px-8"
-    >
+    <div className="w-full">
       <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
         {/* Form */}
         <motion.div
@@ -140,7 +131,7 @@ const Contact = () => {
           <EarthCanvas />
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -58,16 +58,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-    <section
-      style={{
-        background: `
-          radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-          radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
-          #020617
-        `,
-      }}
-      className="w-full min-h-screen py-16 px-4 sm:px-8"
-    >
+    <div className="w-full">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText } text-left`}>
           
@@ -88,7 +79,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </section>
+    </div>
   );
 };
 

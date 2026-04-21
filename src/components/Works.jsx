@@ -238,16 +238,7 @@ const Works = () => {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section
-      style={{
-        background: `
-          radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-          radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
-          #020617
-        `,
-      }}
-      className='w-full'
-    >
+    <div className='w-full'>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
@@ -347,7 +338,7 @@ const Works = () => {
           color: #e0e7ff !important;
         }
       `}</style>
-    </section>
+    </div>
   );
 };
 
