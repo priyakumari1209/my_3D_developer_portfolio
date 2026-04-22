@@ -64,8 +64,8 @@ const Navbar = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-600/20 flex items-center justify-center shadow-lg shadow-purple-500/20 border border-white/10 group-hover:shadow-cyan-500/40 group-hover:scale-105 transition-all duration-300">
-            <img src={logo} alt="logo" className="w-8 h-8 object-contain" />
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-600/20 flex items-center justify-center shadow-lg shadow-purple-500/20 border border-white/10 group-hover:shadow-[#afc6ff]/40 group-hover:scale-105 transition-all duration-300">
+            <img src="/favicon/navbar_logo.png" alt="logo" className="w-8 h-8 object-contain" />
           </div>
           <p className="text-white text-[18px] font-bold cursor-pointer flex tracking-wide">
             Hemanth &nbsp;
@@ -79,8 +79,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`relative text-[16px] font-medium cursor-pointer tracking-wide
-                hover:text-cyan-400 transition-colors duration-300
-                ${active === nav.title ? "text-cyan-400" : "text-gray-300"}
+                hover:text-[#afc6ff] transition-colors duration-300
+                ${active === nav.title ? "text-[#afc6ff]" : "text-gray-300"}
               `}
             >
               <a 
@@ -90,7 +90,7 @@ const Navbar = () => {
               >
                 {nav.title}
                 {/* Animated underline */}
-                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500 transition-transform duration-300 origin-left 
+                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#afc6ff] transition-transform duration-300 origin-left 
                   ${active === nav.title ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
                 `}></span>
               </a>
@@ -119,8 +119,8 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] w-full
-                    hover:text-cyan-400 transition-colors duration-300
-                    ${active === nav.title ? "text-cyan-400" : "text-gray-300"}
+                    hover:text-[#afc6ff] transition-colors duration-300
+                    ${active === nav.title ? "text-[#afc6ff]" : "text-gray-300"}
                   `}
                 >
                   <a 

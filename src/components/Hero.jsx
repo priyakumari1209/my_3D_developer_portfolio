@@ -34,17 +34,23 @@ const Hero = () => {
       try {
         window.TagCanvas.Start("myCanvas", "tags", {
           textColour: "#ffffff",
-          outlineColour: "#ffffff",
+          outlineColour: "transparent",
           reverse: true,
-          depth: 0.9,
+          depth: 0.8,
           maxSpeed: 0.05,
-          initial: [0.2, -0.2],
+          initial: [0.1, -0.1],
           dragControl: true,
           wheelZoom: false,
           noSelect: true,
           freezeActive: false,
           shadow: false,
           shadowBlur: 0,
+          textFont: "Inter, Arial, sans-serif",
+          textHeight: 12,
+          padding: 5,
+          minBrightness: 0.4,
+          outlineMethod: 'none',
+          frontSelect: true,
         });
       } catch (e) {
         console.log("TagCanvas error:", e);
@@ -169,22 +175,44 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           className="hidden md:flex rounded-2xl p-6 items-center justify-center"
         >
-          <div className="relative w-[420px] h-[420px]">
-            <canvas id="myCanvas" width="420" height="420" />
-            <ul id="tags" className="hidden">
-              <li><a>HTML</a></li>
-              <li><a>CSS</a></li>
-              <li><a>JavaScript</a></li>
+          <div className="relative w-[450px] h-[450px]">
+            <canvas id="myCanvas" width="450" height="450" />
+           <ul id="tags" className="hidden">
+              <li><a>Kotlin</a></li>
+              <li><a>Java</a></li>
+              <li><a>Android SDK</a></li>
+              <li><a>Jetpack Compose</a></li>
               <li><a>Flutter</a></li>
-              <li><a>Firebase</a></li>
               <li><a>Dart</a></li>
-              <li><a>Android</a></li>
+              <li><a>MVVM</a></li>
+              <li><a>Coroutines</a></li>
+              <li><a>Retrofit</a></li>
+              <li><a>Room</a></li>
+              <li><a>Dagger/Hilt</a></li>
+              <li><a>Firebase</a></li>
+              <li><a>SQLite</a></li>
               <li><a>Git</a></li>
               <li><a>UI/UX</a></li>
-              <li><a>SQLite</a></li>
-              <li><a>MySQL</a></li>
-              <li><a>Python</a></li>
-              <li><a>Figma</a></li>
+              <li><a>REST APIs</a></li>
+              <li><a>MQTT</a></li>
+              <li><a>WorkManager</a></li>
+              <li><a>RecyclerView</a></li>
+              <li><a>DiffUtil</a></li>
+              <li><a>Material Design 3</a></li>
+              <li><a>CI/CD</a></li>
+              <li><a>GitHub Actions</a></li>
+              <li><a>Postman</a></li>
+              <li><a>Firebase Crashlytics</a></li>
+              <li><a>Firebase Analytics</a></li>
+              <li><a>Android Lifecycle</a></li>
+              <li><a>ANR Optimization</a></li>
+              <li><a>EMV Payments</a></li>
+              <li><a>DUKPT</a></li>
+              <li><a>AES-256 Encryption</a></li>
+              <li><a>ECDH</a></li>
+              <li><a>PCI-DSS</a></li>
+              <li><a>NFC Payments</a></li>
+              <li><a>POS Systems</a></li>
             </ul>
           </div>
         </motion.div>
