@@ -144,6 +144,7 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
+    techs: ["Kotlin", "Jetpack Compose", "Android SDK", "REST APIs", "EMV Payments"],
   },
   // {
   //   title: "Research Intern",
@@ -170,6 +171,7 @@ const experiences = [
       "Implementing intuitive user interfaces and ensuring compatibility across various Android devices and OS versions.",
       "Participating in code reviews and providing constructive feedback to improve code quality and performance.",
     ],
+    techs: ["Java", "Android Studio", "SQLite", "Firebase", "XML"],
   },
   // {
   //   title: "Artificial Intelligence",
@@ -254,7 +256,7 @@ const projects = [
     tags: [
       { name: "Java", color: "text-amber-400" },
       { name: "Android", color: "text-green-400" },
-      { name: "XML", color: "text-[#cbd5f5]" },
+      { name: "XML", color: "text-[#afc6ff]" },
     ],
     image: tictac,
     source_code_link: "https://github.com/Thogaruchesti-hemanth/Tic-Tac-Toe",
@@ -283,7 +285,7 @@ const projects = [
       { name: "HTML5", color: "text-orange-400" },
       { name: "CSS3", color: "text-blue-400" },
       { name: "JavaScript", color: "text-yellow-400" },
-      { name: "Bootstrap", color: "text-[#cbd5f5]" },
+      { name: "Bootstrap", color: "text-[#afc6ff]" },
     ],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
     source_code_link: "https://github.com/Thogaruchesti-hemanth/protfolio",
