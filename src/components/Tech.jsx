@@ -9,8 +9,8 @@ const Tech = () => {
       {/* Section heading */}
       <div className="mb-8 max-w-3xl">
         <p
-          className={styles.sectionSubText}
-          style={{ letterSpacing: "3px", fontSize: "18px" }}
+          className={styles.sectioncSubText}
+          style={{ letterSpacing: "3px", fontSize: "18px",color: "#cbd5f5" }}
         >
           MY TOOLSET
         </p>
@@ -25,17 +25,21 @@ const Tech = () => {
       </p>
 
       {/* Tech grid */}
-      <div className="mt-12 w-full flex flex-wrap justify-center gap-8">
+      <div className="mt-12 w-full flex flex-wrap justify-center gap-6 sm:gap-8">
         {technologies.map((tech) => (
           <div
             key={tech.name}
-            className="w-32 h-32 flex flex-col items-center justify-center rounded-xl
-              bg-[#0f172a] border border-gray-700 shadow-lg
-              hover:-translate-y-2 hover:shadow-xl hover:border-blue-400
-              transition-all duration-300 cursor-pointer"
+            className="group w-28 h-28 sm:w-32 sm:h-32 flex flex-col items-center justify-center rounded-2xl
+              bg-white shadow-[0_8px_24px_rgba(0,0,0,0.06)]
+              hover:-translate-y-3 hover:scale-105 hover:shadow-[0_15px_35px_rgba(175,198,255,0.4)]
+              transition-all duration-500 ease-out cursor-pointer"
           >
-            <img src={tech.icon} alt={tech.name} className="w-12 h-12" />
-            <p className="text-sm font-semibold mt-3 text-gray-300">
+            <img 
+              src={tech.icon} 
+              alt={tech.name} 
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-110 transition-transform duration-500 ease-out" 
+            />
+            <p className="text-xs sm:text-sm font-bold mt-3 text-[#1d1836] transition-colors duration-500 tracking-wide">
               {tech.name}
             </p>
           </div>
@@ -45,4 +49,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, "skills");   // 👈 this ID matches navbar
+export default SectionWrapper(Tech, "skills");  
