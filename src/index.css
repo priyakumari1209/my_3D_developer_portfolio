@@ -16,7 +16,7 @@
 body {
   background: 
     radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-    radial-gradient(circle at 80% 90%, rgba(168,85,247,0.08), transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(175, 198, 255, 0.08), transparent 45%),
     #020617;
   background-attachment: fixed;
 }
@@ -33,11 +33,11 @@ body {
 }
 
 .violet-gradient {
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: linear-gradient(-90deg, #afc6ff 0%, rgba(175, 198, 255, 0) 100%);
 }
 
 .green-pink-gradient {
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #afc6ff 97.5%);
 }
 
 /* ===== TEXT GRADIENTS ===== */
@@ -68,10 +68,10 @@ body {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 20px;
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  border: 1px solid rgba(175, 198, 255, 0.25);
   box-shadow:
-    0 0 60px rgba(99, 102, 241, 0.15),
-    inset 0 0 30px rgba(99, 102, 241, 0.08);
+    0 0 60px rgba(175, 198, 255, 0.15),
+    inset 0 0 30px rgba(175, 198, 255, 0.08);
 }
 
 /* ===== SPINNER ===== */
@@ -86,4 +86,21 @@ body {
       -2.6em 0em 0 0em rgba(255,255,255,0.5),
       -1.8em -1.8em 0 0em rgba(255,255,255,0.7);
   }
+}
+
+/* ===== EXPERIENCE TIMELINE OVERRIDES ===== */
+/* Glowing vertical beam */
+.vertical-timeline::before {
+  background: linear-gradient(to bottom, transparent, #afc6ff, transparent) !important;
+  box-shadow: 0 0 15px rgba(175, 198, 255, 0.5) !important;
+  width: 4px !important;
+}
+
+/* Subtle card scaling on hover */
+.vertical-timeline-element-content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.vertical-timeline-element-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(175, 198, 255, 0.1) !important;
 }

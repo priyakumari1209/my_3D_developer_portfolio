@@ -64,7 +64,7 @@ const Navbar = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-600/20 flex items-center justify-center shadow-lg shadow-purple-500/20 border border-white/10 group-hover:shadow-[#afc6ff]/40 group-hover:scale-105 transition-all duration-300">
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400/20 to-[#afc6ff]/20 flex items-center justify-center shadow-lg shadow-[#afc6ff]/20 border border-white/10 group-hover:shadow-[#afc6ff]/40 group-hover:scale-105 transition-all duration-300">
             <img src="/favicon/navbar_logo.png" alt="logo" className="w-8 h-8 object-contain" />
           </div>
           <p className="text-white text-[18px] font-bold cursor-pointer flex tracking-wide">
@@ -111,7 +111,7 @@ const Navbar = () => {
   className={`${
     !toggle ? "hidden" : "flex"
   } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-2xl
-     bg-[#020617]/90 backdrop-blur-xl border border-white/10 shadow-2xl shadow-purple-500/20`}
+     bg-[#020617]/90 backdrop-blur-xl border border-white/10 shadow-2xl shadow-[#afc6ff]/20`}
 >
 
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
