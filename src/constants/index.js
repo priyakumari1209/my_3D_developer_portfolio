@@ -2,8 +2,11 @@ import {
   mobile,
   backend,
   javascript,
-
+  html,
   css,
+  reactjs,
+  nodejs,
+  mongodb,
   meta,
 } from "../assets";
 import java from "../assets/java.png";
@@ -72,54 +75,60 @@ const services = [
 const technologies = [
   {
     name: "Java",
-    icon: java,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
   },
   {
     name: "Kotlin",
-    icon: kotlin,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",
   },
   {
     name: "Compose",
-    icon: compose,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg",
   },
   {
-    name: "Android ",
-    icon: android,
+    name: "Android",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
   },
   {
-    name: "Git",
-    icon: git,
+    name: "Android Studio",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg",
   },
   {
     name: "Firebase",
-    icon: firebase,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
   },
-
+  {
+    name: "SQLite",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
+  },
   {
     name: "MySQL",
-    icon: mysqicons8lIcon,
-  },
-
-  {
-
-    name: "Sqllite",
-    icon: sqllite,
-  },
-  // {
-  //   name: "HTML 5",
-  //   icon: html,
-  // },
-  {
-    name: "CSS 3",
-    icon: css,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Material Design",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
   },
-
-
-
+  {
+    name: "Flutter",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+  },
+  {
+    name: "Dart",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  },
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  },
+  {
+    name: "TensorFlow",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+  },
 ];
 
 const experiences = [
@@ -245,7 +254,7 @@ const projects = [
     tags: [
       { name: "Java", color: "text-amber-400" },
       { name: "Android", color: "text-green-400" },
-      { name: "XML", color: "text-purple-400" },
+      { name: "XML", color: "text-[#cbd5f5]" },
     ],
     image: tictac,
     source_code_link: "https://github.com/Thogaruchesti-hemanth/Tic-Tac-Toe",
@@ -274,7 +283,7 @@ const projects = [
       { name: "HTML5", color: "text-orange-400" },
       { name: "CSS3", color: "text-blue-400" },
       { name: "JavaScript", color: "text-yellow-400" },
-      { name: "Bootstrap", color: "text-violet-400" },
+      { name: "Bootstrap", color: "text-[#cbd5f5]" },
     ],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
     source_code_link: "https://github.com/Thogaruchesti-hemanth/protfolio",
@@ -282,4 +291,23 @@ const projects = [
   },
 ];
 
+export const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/Thogaruchesti-hemanth",
+    icon: "github",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/hemanth-thogaruchesti-1349b1248/", // Placeholder or real if known
+    icon: "linkedin",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/",
+    icon: "instagram",
+  },
+];
+
 export { services, technologies, experiences, testimonials, projects };
+
