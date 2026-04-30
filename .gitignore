@@ -27,3 +27,6 @@ dist-ssr
 
 # vscode
 .vscode
+
+# Vite
+vite.config.js.timestamp-*

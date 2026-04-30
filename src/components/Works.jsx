@@ -25,6 +25,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
+      ref={ref}
       layout
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -230,7 +231,7 @@ const ProjectCard = ({
       </div>
     </motion.div>
   );
-};
+});
 
 const Works = () => {
   const [activeFilter, setActiveFilter] = useState("all");

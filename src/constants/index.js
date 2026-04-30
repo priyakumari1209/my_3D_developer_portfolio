@@ -133,62 +133,33 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Junior Android Developer",
-    company_name: "ina Payments Software Pvt Ltd",
+    title: "Android Developer",
+    company_name: "INA Payments Software Pvt Ltd",
     icon: inapay,
     iconBg: "#E6DEDD",
-    date: "sep 2024 - Present",
+    date: "Nov 2024 - Present", // Updated to match resume
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained production-grade POS payment applications using Java and MVVM Architecture, deploying builds to 100+ merchant terminals.",
+      "Executed end-to-end EMV transaction flows for Visa and Mastercard L3 certifications, achieving 100% compliance with industry specifications.",
+      "Implemented secure transaction processing using AES-256 encryption and DUKPT key handling to ensure PCI-DSS compliance.",
+      "Reduced real-time application crashes by 40% and improved UI responsiveness by 25% by optimizing lifecycle handling and implementing MQTT-based communication.",
     ],
-    techs: ["Kotlin", "Jetpack Compose", "Android SDK", "REST APIs", "EMV Payments"],
+    techs: ["Java", "Kotlin", "MVVM", "MQTT", "Android SDK", "AES-256", "DUKPT"], // Aligned with resume skills
   },
-  // {
-  //   title: "Research Intern",
-  //   company_name: "ReAnIn",
-  //   icon: reanin,
-  //   iconBg: "#383E56",
-  //   date: "Mar 2024 - Jul 2024",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
   {
-    title: "Android Developer",
-    company_name: "Perfect eLearning",
+    title: "Android App Development Intern",
+    company_name: "Perfect E Learning",
     icon: perfectelearning,
     iconBg: "#E6DEDD",
-    date: "Dec 2022 - Aug 2023",
+    date: "Dec 2022 - Aug 2023", // Confirmed from resume
     points: [
-      "Developing and maintaining Android applications using Java and Android Studio.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality mobile applications.",
-      "Implementing intuitive user interfaces and ensuring compatibility across various Android devices and OS versions.",
-      "Participating in code reviews and providing constructive feedback to improve code quality and performance.",
+      "Enhanced 4 Android applications by resolving over 25 bugs, successfully improving crash-free sessions from 85% to 98%.",
+      "Designed UI layouts using XML and implemented core logic for interactive learning apps, resulting in a 20% increase in user engagement.",
+      "Reduced ANR (Application Not Responding) errors by 30% through improved event handling and fragment lifecycle management.",
+      "Collaborated in a remote environment to deliver production-ready features and UI components for educational mobile products.",
     ],
-    techs: ["Java", "Android Studio", "SQLite", "Firebase", "XML"],
+    techs: ["Java", "Android Studio", "XML", "SQLite", "Firebase", "Lifecycle Management"], // Based on resume content
   },
-  // {
-  //   title: "Artificial Intelligence",
-  //   company_name: "SmartKnower",
-  //   icon: smartknower,
-  //   iconBg: "#383E56",
-  //   date: "Jun 2022 - Aug 2022",
-  //   points: [
-  //     "Developing and maintaining Android applications using Java and related tools.",
-  //   "Collaborating with cross-functional teams including designers, product managers, and other developers to deliver high-quality mobile products.",
-  //   "Implementing intuitive user interfaces and ensuring compatibility across multiple Android devices.",
-  //   "Participating in code reviews and providing constructive feedback to maintain code quality."
-  //   ],
-  // },
-
-
-
 ];
 
 const testimonials = [
