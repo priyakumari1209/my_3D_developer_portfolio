@@ -49,6 +49,22 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.orange-text-gradient {
+  background: linear-gradient(to top, #f12711, #f5af19);
+}
+
+.green-text-gradient {
+  background: linear-gradient(to top, #11998e, #38ef7d);
+}
+
+.blue-text-gradient {
+  background: linear-gradient(to top, #8b95c9, #cbd5f5);
+}
+
+.pink-text-gradient {
+  background: linear-gradient(to top, #ec008c, #fc6767);
+}
+
 /* ===== CANVAS LOADER ===== */
 .canvas-loader {
   font-size: 10px;

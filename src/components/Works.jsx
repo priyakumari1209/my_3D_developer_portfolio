@@ -14,26 +14,29 @@ const filterCategories = [
   { key: "ai", label: "AI/ML" },
 ];
 
-const ProjectCard = React.forwardRef(({
-  index,
+const ProjectCard = ({
   name,
   description,
   tags,
   image,
   source_code_link,
   demo_link,
-}, ref) => {
+  category,
+}) => {
   return (
     <motion.div
       ref={ref}
       layout
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.35, delay: index * 0.1 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      transition={{ 
+        layout: { type: "spring", stiffness: 180, damping: 20 },
+        opacity: { duration: 0.2 }
+      }}
       style={{
         background: 'linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(2,6,23,0.95) 100%)',
-        border: '1px solid rgba(99,102,241,0.15)',
+        border: '1px solid rgba(203, 213, 245, 0.15)',
         borderRadius: '16px',
         overflow: 'hidden',
         width: '100%',
@@ -143,9 +146,9 @@ const ProjectCard = React.forwardRef(({
                 fontWeight: 500,
                 padding: '4px 12px',
                 borderRadius: '20px',
-                background: 'rgba(99,102,241,0.1)',
-                border: '1px solid rgba(99,102,241,0.2)',
-                color: '#a5b4fc',
+                background: 'rgba(203, 213, 245, 0.05)',
+                border: '1px solid rgba(203, 213, 245, 0.15)',
+                color: '#cbd5f5',
                 letterSpacing: '0.3px',
               }}
             >
@@ -197,12 +200,12 @@ const ProjectCard = React.forwardRef(({
                 gap: '6px',
                 fontSize: '13px',
                 fontWeight: 500,
-                color: '#c4b5fd',
+                color: '#cbd5f5',
                 textDecoration: 'none',
                 padding: '6px 14px',
                 borderRadius: '8px',
-                background: 'rgba(99,102,241,0.1)',
-                border: '1px solid rgba(139,92,246,0.25)',
+                background: 'rgba(203, 213, 245, 0.1)',
+                border: '1px solid rgba(203, 213, 245, 0.25)',
                 transition: 'all 0.2s ease',
               }}
               className="project-link-btn"
@@ -221,7 +224,7 @@ const ProjectCard = React.forwardRef(({
                   d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                 />
               </svg>
-              Demo
+              {category === "android" ? "Playstore" : "Demo"}
             </a>
           )}
         </div>
@@ -278,15 +281,15 @@ const Works = () => {
               outline: 'none',
               background:
                 activeFilter === cat.key
-                  ? 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)'
+                  ? '#cbd5f5'
                   : 'rgba(255,255,255,0.03)',
               border:
                 activeFilter === cat.key
-                  ? '1px solid rgba(139,92,246,0.5)'
+                  ? '1px solid #cbd5f5'
                   : '1px solid rgba(255,255,255,0.08)',
               color:
                 activeFilter === cat.key
-                  ? '#ffffff'
+                  ? '#020617'
                   : '#8b95c9',
               boxShadow:
                 activeFilter === cat.key
@@ -304,39 +307,36 @@ const Works = () => {
       </div>
 
       {/* Project Cards Grid */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-          gap: '28px',
-          marginTop: '48px',
-          justifyItems: 'center',
+      <motion.div
+        layout
+        className='mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full justify-items-center'
+        transition={{ 
+          layout: { type: "spring", stiffness: 180, damping: 20 }
         }}
       >
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <ProjectCard
               key={project.name}
-              index={index}
               {...project}
             />
           ))}
         </AnimatePresence>
-      </div>
+      </motion.div>
 
       {/* Hover styles */}
       <style>{`
         .project-card-wrapper:hover {
-          border-color: rgba(99,102,241,0.4) !important;
-          box-shadow: 0 8px 32px rgba(99,102,241,0.15), 0 0 0 1px rgba(99,102,241,0.1) !important;
+          border-color: rgba(203, 213, 245, 0.4) !important;
+          box-shadow: 0 8px 32px rgba(203, 213, 245, 0.15), 0 0 0 1px rgba(203, 213, 245, 0.1) !important;
         }
         .project-card-wrapper:hover .project-card-img {
           transform: scale(1.08);
         }
         .project-link-btn:hover {
-          background: rgba(99,102,241,0.2) !important;
-          border-color: rgba(139,92,246,0.4) !important;
-          color: #e0e7ff !important;
+          background: rgba(203, 213, 245, 0.2) !important;
+          border-color: rgba(203, 213, 245, 0.4) !important;
+          color: #ffffff !important;
         }
       `}</style>
     </div>

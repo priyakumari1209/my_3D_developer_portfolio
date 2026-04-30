@@ -8,6 +8,7 @@ import {
   Navbar,
   Tech,
   Works,
+  Footer,
 } from "./components";
 import { styles } from "./styles";
 
@@ -28,6 +29,7 @@ const App = () => {
           <Works />
           <Feedbacks />
           <Contact />
+          <Footer />
         </div>
 
       </div>
