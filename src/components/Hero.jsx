@@ -86,7 +86,7 @@ const Hero = () => {
         >
           {/* Badge */}
           <span className="px-4 py-2 text-sm rounded-full bg-white/10 text-gray-300 border border-white/20">
-            Mobile Developer • Java • Kotlin
+          Mobile Developer | Java | Kotlin
           </span>
 
           {/* Name */}
@@ -97,10 +97,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-gray-300 text-lg max-w-xl">
-            I'm Hemanth — an Android developer focused on scalable architecture,
-            performance-first apps, and production-grade UI. I enjoy turning
-            complex ideas into smooth user experiences.
-          </p>
+I build high-performance, production-grade mobile solutions using Java and Kotlin. From architecting secure payment systems to designing Material 3 productivity apps, I focus on creating scalable, user-centric experiences with MVVM and Jetpack Compose          </p>
 
           {/* Buttons */}
           <div className="space-y-6 pt-4">

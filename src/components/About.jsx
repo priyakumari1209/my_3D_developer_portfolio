@@ -7,30 +7,30 @@ const services = [
   {
     title: "Android Application Engineering",
     description:
-      "Developing robust native Android applications using Java and modern architectural patterns with a focus on long-term maintainability.",
+      "Developing native applications using Java and Kotlin with a focus on long-term maintainability. Leveraging Android SDK and modern patterns to build stable, feature-rich apps.",
   },
   {
     title: "Modern UI & UX",
     description:
-      "Crafting clean, intuitive interfaces aligned with Material Design principles and optimized for real-world user interactions.",
+      "Crafting intuitive interfaces using Material Design 3 and Jetpack Compose. Improving user engagement through responsive layouts and interactive elements.",
   },
   {
     title: "Architecture & Performance",
     description:
-      "Applying MVVM and clean architecture to ensure scalable systems, smooth performance, and reliable state management.",
+      "Applying MVVM and Clean Architecture to reduce crashes and improve session stability. Optimizing app performance by resolving lifecycle-related issues and network failures.",
   },
   {
-    title: "API Integration",
+    title: "Data & Integration",
     description:
-      "Integrating RESTful APIs, data persistence, and background services to deliver consistent and responsive mobile experiences.",
+      "Integrating RESTful APIs, Firebase, and Room Database for seamless data flow. Implementing real-time communication and background services for responsive mobile experiences.",
   },
 ];
 
 // Service Card Component
 const ServiceCard = ({ title, description }) => (
-  <div className="w-full rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-200">
+  <div className="w-full rounded-xl bg-[#0f172a] shadow-lg flex flex-col p-6 justify-start gap-4 border border-gray-700 hover:border-blue-200 transition-all duration-300">
     <h3 className="text-[#afc6ff] text-lg font-bold">{title}</h3>
-    <p className="text-gray-300 text-sm">{description}</p>
+    <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
   </div>
 );
 
@@ -50,15 +50,17 @@ const About = () => {
 
       {/* Description */}
       <p className="mt-4 text-gray-300 text-lg max-w-4xl leading-[30px]">
-        I design and build high-quality Android applications with a strong focus
-        on performance, scalability, and clean user experience. My work revolves
-        around transforming complex requirements into intuitive, reliable mobile
-        products using modern Android development practices.
+        I am an Android Developer dedicated to engineering high-performance
+        applications that thrive in demanding production environments. Currently
+        at INA Payments, I architect mobile solutions with a focus on real-time
+        data handling, system reliability, and clean architecture.
         <br />
         <br />
-        I value clean architecture, maintainable code, and thoughtful UI design.
-        Every application I build is approached with a product mindset — balancing
-        technical precision with usability and long-term growth.
+        My expertise spans the full mobile development lifecycle—from designing
+        Material 3 productivity tools to optimizing enterprise-grade systems
+        that serve over 100+ terminals. I am passionate about modern Android
+        standards, ensuring every application I build is secure, maintainable,
+        and centered around a seamless user experience.
       </p>
 
       {/* Cards – Responsive grid */}

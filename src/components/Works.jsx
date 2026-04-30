@@ -14,7 +14,7 @@ const filterCategories = [
   { key: "ai", label: "AI/ML" },
 ];
 
-const ProjectCard = ({
+const ProjectCard = React.forwardRef(({
   index,
   name,
   description,
@@ -22,9 +22,10 @@ const ProjectCard = ({
   image,
   source_code_link,
   demo_link,
-}) => {
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       layout
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
@@ -227,7 +228,7 @@ const ProjectCard = ({
       </div>
     </motion.div>
   );
-};
+});
 
 const Works = () => {
   const [activeFilter, setActiveFilter] = useState("all");
